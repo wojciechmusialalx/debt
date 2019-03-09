@@ -19,9 +19,9 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="<c:url value="/users"/>">Lista</a></li>
+                <li><a href="<c:url value="/debts"/>">Debts</a></li>
                 <li>
-                    <a href="<c:url value="/users/create"/>">Nowy <span class="glyphicon glyphicon-plus"></span></a>
+                    <a href="<c:url value="/debts/create"/>">New debt <span class="glyphicon glyphicon-plus"></span></a>
                 </li>
             </ul>
         </div>
