@@ -11,6 +11,10 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class User {
 
+    public enum Role {
+        USER, ADMIN
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -26,7 +30,15 @@ public class User {
     @Column(length = 45, nullable = false)
     private String lastName;
 
-    public User(int id) {
-        this.id = id;
+    @Enumerated(EnumType.STRING)
+    @Column(length = 45, nullable = false)
+    private Role role;
+
+    public User(String email, String password, String firstName, String lastName) {
+        this.email = email;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.role = Role.USER;
     }
 }
